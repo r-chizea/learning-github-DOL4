@@ -7,12 +7,12 @@ choice = int(input("please select the number of a function: "))
 if choice == 1:
     b = int(input("enter length of side B: "))
     c = int(input("enter length of side C: "))
-    print("legnth of side A =", c**2-b**2)
+    print("legnth of side A =", (c**2-b**2)**0.5)
 elif choice == 2:
     a = int(input("enter length of side A: "))
     c = int(input("enter length of side C: "))
-    print("legnth of side B =", c**2-a**2)
+    print("legnth of side B =", (c**2-a**2)**0.5)
 elif choice == 3:
     a = int(input("enter length of side A: "))
     b = int(input("enter length of side B: "))
-    print("legnth of side C =", a**2+b**2)
+    print("legnth of side C =", (a**2+b**2)**0.5)
