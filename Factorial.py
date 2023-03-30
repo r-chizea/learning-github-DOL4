@@ -1,6 +1,3 @@
-from collections import Counter
-
-
 num = int(input("please enter a number: "))
 counter = 1
 calc = 1
