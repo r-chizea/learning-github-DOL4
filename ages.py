@@ -24,6 +24,9 @@ ages.sort()
 
 print(ages)
 
+young_adults = len(ages) / counter
+
+print(young_adults)
 
 
 
