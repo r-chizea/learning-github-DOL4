@@ -1,7 +1,7 @@
 def getIncomeTax(salary):
     taxable_salary = salary - 11850
     if taxable_salary <= 0:
-        return "You are not getting taxed"
+        return 0
     elif  0 < taxable_salary <= 34501:
         return taxable_salary * 0.2
     elif 34501 <= taxable_salary <= 150000:
