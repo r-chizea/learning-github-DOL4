@@ -1,3 +1,5 @@
+from abc import ABCMeta, abstractmethod
+
 class Student:
 
     def __init__(self, name, age, form):
@@ -21,3 +23,28 @@ print(stu2.age)
 scores = [75, 89, 94]
 
 print(stu1.testAvg(scores))
+
+class Bird(metaclass=ABCMeta):
+
+    def __init__(self, name):
+        self.name = name
+
+    @abstractmethod
+    def can_fly(self):
+        pass
+
+class Owl(Bird):
+
+    def can_fly(self):
+        print(f"{self.name} is an owl and can fly.")
+
+class Dodo(Bird):
+
+    def can_fly(self):
+        print(f"{self.name} is a dodo and can't fly.")
+
+bird1 = Owl("Hootie")
+bird2 = Dodo("Squawkie")
+
+bird1.can_fly()
+bird2.can_fly()
