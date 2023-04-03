@@ -95,3 +95,38 @@ print(food)
 food.transfer_to(travel, 20)
 print(food)
 print(travel)
+
+class Shape(metaclass=ABCMeta):
+
+    def __init__(self, length, width):
+        self.length = length
+        self.width = width
+    
+    @abstractmethod
+    def perimeter(self):
+        pass
+
+    @abstractmethod
+    def area(self):
+        pass
+
+class Square(Shape):
+
+    def __init__(self, length):
+        self.length = length
+
+    def perimeter(self):
+        return self.length * 4
+    
+    def area(self):
+        return self.length ** 2
+    
+class Rectangle(Shape):
+
+    def perimeter(self):
+        return 2 * self.length + 2 * self.width
+    
+    def area(self):
+        return self.length * self.width
+
+
