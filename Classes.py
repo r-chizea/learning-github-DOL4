@@ -67,12 +67,12 @@ class Budget:
         self.balance += amount
     
     def transfer_to(self, anotherBudget, amount):
-        self.balance -= amount
-        anotherBudget.balance += amount
+        self.withdraw(amount)
+        anotherBudget.deposit(amount)
     
     def transfer_from(self, anotherBudget, amount):
-        self.balance += amount
-        anotherBudget.balance -= amount
+        self.deposit(amount)
+        anotherBudget.withdraw(amount)
     
 food = Budget(300.00)
 travel = Budget(75.00)
