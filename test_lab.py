@@ -3,6 +3,7 @@
 import linting
 import vowels
 import factorials_3
+import squares_3
 
 def test_count():
     assert linting.count([2, 4, 6, 8, 10, 8, 6, 4, 2, 2, 4, 2], 2) == 4
@@ -16,4 +17,8 @@ def test_vowels():
 
 def test_factorials():
     assert factorials_3.fact(5) == 120
+    assert factorials_3.fact(0) == 1
 
+def test_squares():
+    assert squares_3.list_of_squares(5) == {1:1, 2:4, 3:9, 4:16, 5:25}
+    assert squares_3.list_of_squares(10) == {1:1, 2:4, 3:9, 4:16, 5:25, 6:36, 7:49, 8:64, 9:81, 10:100}
