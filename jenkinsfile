@@ -4,9 +4,6 @@ pipeline {
     stages {
         stage('Prep') {
             steps {
-                // example of echo directive
-                echo 'Grap file from a Git repo'
-                // example of git directive
                 git branch: 'main', url: 'https://github.com/r-chizea/learning-github-DOL4.git'
             }
         }
