@@ -1,0 +1,31 @@
+pipeline {
+    agent any
+
+    stages {
+        stage('list') {
+            steps {
+                sh "ls"
+            }
+        }
+        stage('display') {
+            steps {
+                sh "pwd"
+            }
+        }
+        stage('create') {
+            steps {
+                touch "testFile"
+            }
+        }
+        stage('write') {
+            steps {
+                echo 'This is a test'
+            }
+        }
+        stage('move') {
+            steps {
+                sh "mv testFile jenkins"
+            }
+        }
+    }
+}
