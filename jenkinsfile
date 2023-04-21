@@ -14,7 +14,7 @@ pipeline {
         }
         stage('create') {
             steps {
-                touch "testFile"
+                sh "touch testFile"
             }
         }
         stage('write') {
