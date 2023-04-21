@@ -12,7 +12,7 @@ pipeline {
                 sh "ls"
             }
         }
-        stage('display') {
+        stage('display directory') {
             steps {
                 sh "pwd"
             }
@@ -22,14 +22,14 @@ pipeline {
                 sh "touch testFile"
             }
         }
-        stage('write') {
+        stage('echo') {
             steps {
                 echo 'This is a test'
             }
         }
-        stage('move') {
+        stage('mv') {
             steps {
-                sh "mv testFile jenkins"
+                sh "mv testFile fileTest"
             }
         }
     }
