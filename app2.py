@@ -29,7 +29,7 @@ def add_colour():
         return "You need to use a POST HTTP method"
 
 @app.route('/changecolour/<colourid>', methods=['GET', 'PUT'])
-def colourshow(colourid):
+def colourchange(colourid):
     if request.method == 'PUT':
         if len(colours) <= int(colourid):
             return "Outside of data range"
