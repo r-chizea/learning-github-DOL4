@@ -6,9 +6,8 @@ app = Flask(__name__)
 def hello_internet():
     return 'Hello Internet!'
 
-@app.route('/name')
-def hello_user():
-    name = 'Rob'
+@app.route('/name/<name>')
+def hello_user(name):
     return f'Hello {name}!'
 
 if __name__ == '__main__':
