@@ -5,13 +5,22 @@ app = Flask(__name__)
 colours = ['purple', 'black', 'gold']
 
 contents = f'''
-Hello! You have made a GET request. Here is the data currently held:{colours}.
+Hello! You have made a GET request. 
  You can also make more requests using these URLs:
+ Show all colours: http://18.170.229.188:5000/showall
+ show a colour: http://18.170.229.188:5000/showcolour/<colourid>
+ add a colour: http://18.170.229.188:5000/addcolour
+ change a colour: http://18.170.229.188:5000/changecolour/<colourid>
+ delete a colour: http://18.170.229.188:5000/delcolour/<colourid>
 '''
 
 @app.route('/')
 def home():
     return contents
+
+@app.route('/showall')
+def allcolours():
+    return colours
 
 @app.route('/showcolour/<colourid>')
 def colourshow(colourid):
